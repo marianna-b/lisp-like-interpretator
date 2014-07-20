@@ -41,7 +41,7 @@ cdr' ((List x):[]) =
 cdr' _ = Left "incorrect arg cdr"
 
 cons' :: Function
-cons' ((List a):((List x):[])) = Right $ [List $ a ++ x]
+cons' (a:((List x):[])) = Right $ [List $ a:x]
 cons' _ = Left "incorrect arg cons"
 
 --Evaluation stuf---------------------------------------------------------------
